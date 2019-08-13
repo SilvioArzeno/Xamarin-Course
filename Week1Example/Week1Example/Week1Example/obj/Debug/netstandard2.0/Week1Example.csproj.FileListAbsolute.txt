@@ -1,0 +1,12 @@
+C:\Users\Silvio Arzeno\source\repos\Week1Example\Week1Example\Week1Example\bin\Debug\netstandard2.0\Week1Example.deps.json
+C:\Users\Silvio Arzeno\source\repos\Week1Example\Week1Example\Week1Example\bin\Debug\netstandard2.0\Week1Example.dll
+C:\Users\Silvio Arzeno\source\repos\Week1Example\Week1Example\Week1Example\bin\Debug\netstandard2.0\Week1Example.pdb
+C:\Users\Silvio Arzeno\source\repos\Week1Example\Week1Example\Week1Example\obj\Debug\netstandard2.0\Week1Example.csprojAssemblyReference.cache
+C:\Users\Silvio Arzeno\source\repos\Week1Example\Week1Example\Week1Example\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Silvio Arzeno\source\repos\Week1Example\Week1Example\Week1Example\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\Silvio Arzeno\source\repos\Week1Example\Week1Example\Week1Example\obj\Debug\netstandard2.0\Week1Example.csproj.CoreCompileInputs.cache
+C:\Users\Silvio Arzeno\source\repos\Week1Example\Week1Example\Week1Example\obj\Debug\netstandard2.0\Week1Example.AssemblyInfoInputs.cache
+C:\Users\Silvio Arzeno\source\repos\Week1Example\Week1Example\Week1Example\obj\Debug\netstandard2.0\Week1Example.AssemblyInfo.cs
+C:\Users\Silvio Arzeno\source\repos\Week1Example\Week1Example\Week1Example\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Silvio Arzeno\source\repos\Week1Example\Week1Example\Week1Example\obj\Debug\netstandard2.0\Week1Example.dll
+C:\Users\Silvio Arzeno\source\repos\Week1Example\Week1Example\Week1Example\obj\Debug\netstandard2.0\Week1Example.pdb
