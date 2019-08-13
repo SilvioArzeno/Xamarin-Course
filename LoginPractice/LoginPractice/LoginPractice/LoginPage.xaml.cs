@@ -17,5 +17,20 @@ namespace LoginPractice
         {
             InitializeComponent();
         }
+
+        async private void LoginButton_Clicked(object sender, EventArgs e)
+        {
+            string User = Username.Text;
+            string Pass = Password.Text;
+
+            if(string.IsNullOrEmpty(User) || string.IsNullOrEmpty(Pass))
+            {
+                await DisplayAlert("Incomplete Login", "Username or Password not given, please try again", "OK");
+            }
+            else
+            {
+                await DisplayAlert("Welcome!", string.Concat("Hello ",User), "OK");
+            }
+        }
     }
 }
