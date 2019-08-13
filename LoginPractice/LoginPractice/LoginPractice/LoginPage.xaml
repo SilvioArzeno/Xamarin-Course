@@ -5,12 +5,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="LoginPractice.MainPage">
-
-    <StackLayout>
+    <ScrollView>
+        <StackLayout>
         <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
-
+            <Image Source="logointec.png"/>
+            <Entry x:Name="UserName"/>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>
