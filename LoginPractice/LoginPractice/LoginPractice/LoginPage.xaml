@@ -4,7 +4,8 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="LoginPractice.MainPage">
+             x:Class="LoginPractice.MainPage"
+             BackgroundImageSource="redfade.jpg">
     <ScrollView>
         <StackLayout>
         <!-- Place new controls here -->
@@ -15,11 +16,14 @@
             <Entry x:Name="Username"
                    Margin="30,0,30,0"
                    Placeholder="Username"
-                   TextColor="Black"/>
+                   TextColor="White"
+                   PlaceholderColor="Cornsilk"
+                   />
             <Entry x:Name="Password"
                    Margin="30,0,30,0"
                    Placeholder="Password"
-                   TextColor="Black"
+                   TextColor="White"
+                   PlaceholderColor="Cornsilk"
                    IsPassword = "True"/>
             <Button x:Name="LoginButton"
                     BackgroundColor="Red"
