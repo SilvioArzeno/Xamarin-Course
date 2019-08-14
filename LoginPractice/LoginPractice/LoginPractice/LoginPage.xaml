@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="LoginPractice.MainPage">
+    <ScrollView>
+        <StackLayout>
+        <!-- Place new controls here -->
+            <Image Source="logointec.png"
+                   Scale="0.75"
+                   VerticalOptions="Center"
+                   HeightRequest="300"/>
+            <Entry x:Name="Username"
+                   Margin="30,0,30,0"
+                   Placeholder="Username"
+                   TextColor="Black"/>
+            <Entry x:Name="Password"
+                   Margin="30,0,30,0"
+                   Placeholder="Password"
+                   TextColor="Black"
+                   IsPassword = "True"/>
+            <Button x:Name="LoginButton"
+                    BackgroundColor="Red"
+                    Margin="75,15,75,15"
+                    CornerRadius="25"
+                    Text="Login"
+                    TextColor="White"
+                    FontSize="Medium"
+                    Clicked="LoginButton_Clicked"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
