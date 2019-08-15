@@ -25,7 +25,7 @@ namespace LoginPractice
 
             if(string.IsNullOrEmpty(User) || string.IsNullOrEmpty(Pass))
             {
-                await DisplayAlert("Incomplete Login", "Username or Password not given, please try again", "OK");
+                await DisplayAlert("Incomplete Login", "Username or Password incomplete, please try again", "OK");
             }
             else
             {
