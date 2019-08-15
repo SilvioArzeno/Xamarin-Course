@@ -5,7 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="LoginPractice.MainPage"
-             BackgroundImageSource="redfade.jpg">
+             BackgroundImageSource="pinkfade">
     <ScrollView>
         <StackLayout>
         <!-- Place new controls here -->
@@ -16,13 +16,13 @@
             <Entry x:Name="Username"
                    Margin="30,0,30,0"
                    Placeholder="Username"
-                   TextColor="White"
+                   TextColor="Black"
                    PlaceholderColor="Cornsilk"
                    />
             <Entry x:Name="Password"
                    Margin="30,0,30,0"
                    Placeholder="Password"
-                   TextColor="White"
+                   TextColor="Black"
                    PlaceholderColor="Cornsilk"
                    IsPassword = "True"/>
             <Button x:Name="LoginButton"

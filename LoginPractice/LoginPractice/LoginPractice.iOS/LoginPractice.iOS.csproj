@@ -133,4 +133,10 @@
   <ItemGroup>
     <BundleResource Include="Resources\logointec.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\pinkfade.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\redfade.jpg" />
+  </ItemGroup>
 </Project>
