@@ -28,6 +28,7 @@
                     Text="Login"
                     TextColor="White"
                     FontSize="Medium"
+                    FontAttributes="Bold"
                     Clicked="LoginButton_Clicked"/>
         </StackLayout>
     </ScrollView>
