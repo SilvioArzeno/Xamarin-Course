@@ -29,7 +29,7 @@ namespace LoginPractice
             }
             else
             {
-                await DisplayAlert("Welcome!", string.Concat("Hello ",User), "OK");
+                await DisplayAlert("Welcome!", $"Hello {User} !", "OK");
             }
         }
     }
