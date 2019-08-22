@@ -130,4 +130,19 @@
       <Name>GridNavigation_1</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_cloud.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_radio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_people.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_locationpin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\MountainPhonepaper.jpg" />
+  </ItemGroup>
 </Project>

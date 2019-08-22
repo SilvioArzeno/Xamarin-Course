@@ -10,7 +10,7 @@ namespace GridNavigation_1
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MainPage()) {BarBackgroundColor = Color.Beige, BarTextColor = Color.Black};
         }
 
         protected override void OnStart()
