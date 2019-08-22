@@ -54,7 +54,7 @@
                 CornerRadius="10"
                 ContentLayout="Top,-50"
                 Padding="15"
-                Opacity="10"
+                Opacity="0.85"
                />
         <Button x:Name="CrewButton"
                 Grid.Row="3"
@@ -66,6 +66,7 @@
                 CornerRadius="10"
                 ContentLayout="Top,-50"
                 Padding="15"
+                Opacity="0.85"
                />
         <Button x:Name="LocationsButton"
                 Grid.Row="2"
@@ -77,6 +78,7 @@
                 CornerRadius="10"
                 ContentLayout="Top,-50"
                 Padding="15"
+                Opacity="0.85"
                />
         <Button x:Name="RadioButton"
                 Grid.Row="3"
@@ -88,7 +90,7 @@
                 CornerRadius="10"
                 ContentLayout="Top,-50"
                 Padding="15"
-                
+                Opacity="0.85"
                />
     </Grid>
 
