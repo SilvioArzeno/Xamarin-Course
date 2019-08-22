@@ -6,6 +6,17 @@
              mc:Ignorable="d"
              x:Class="FrameUI_Hotel.App">
     <Application.Resources>
-
+        <ResourceDictionary>
+            <Style x:Key="TagStyle" TargetType="Button">
+                <Setter Property="CornerRadius" Value="25"/>
+                <Setter Property="Scale" Value="0.6"/>
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="TextColor" Value="DodgerBlue"/>
+                <Setter Property="BorderWidth" Value="2"/>
+                <Setter Property="BorderColor" Value="DodgerBlue"/>
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+            </Style>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
