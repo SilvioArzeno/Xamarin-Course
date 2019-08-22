@@ -130,4 +130,7 @@
       <Name>FrameUI_Hotel</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\queenroom.jpg" />
+  </ItemGroup>
 </Project>
