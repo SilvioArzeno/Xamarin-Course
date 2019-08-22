@@ -4,19 +4,18 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="FrameUI_Hotel.MainPage" >
+             x:Class="FrameUI_Hotel.MainPage">
 
 
     <ScrollView>
-        <Grid ColumnDefinitions="*,*"
-              RowDefinitions="*,*">
+        <Grid>
 
             <Image Source="queenroom"
                    Grid.Row="0"
                    Grid.RowSpan="1"
                    Grid.Column="0"
                    Grid.ColumnSpan="2"
-                   Aspect="AspectFill"/>
+                   Aspect="AspectFill" />
 
 
             <ScrollView 
@@ -30,7 +29,7 @@
                 <!-- Place new controls here -->
                 <Frame 
                     BackgroundColor="White" 
-                    CornerRadius="20" 
+                    CornerRadius="10" 
                     BorderColor="Gray" 
                     VerticalOptions="Fill" 
                     Margin="25,0,25,0"
@@ -39,16 +38,45 @@
                         <Label Text="Fancy Hotel"
                                FontSize="Large"
                                FontAttributes="Bold"/>
-                        <Grid ColumnDefinitions="*,*,*,*"
-                                  RowDefinitions="*,*,*,*">
-
-                            <Label Text="Hellow"
-                                       Grid.Column="0"
-                                       Grid.Row="0"/>
+                        <Grid HeightRequest="40">
+                            <Image Source="ic_clock"
+                                   Scale="2"/>
+                            <Label Text="7 May, 2018 | 4:20"
+                                   Grid.Column="1"
+                                   Grid.ColumnSpan="6"/>
+                            <Image Source="ic_pin"
+                                   Scale="2"
+                                   Grid.Row="1"/>
+                            <Label Text="Calle 42, Capotillo, Santo Domingo"
+                                   Grid.Column="1"
+                                   Grid.ColumnSpan="6"
+                                   Grid.Row="1" />
 
                         </Grid>
+                        <StackLayout Orientation="Horizontal" 
+                                     Spacing="-25">
 
+                            <Button Text="Cheap"
+                                 Style="{StaticResource Key=TagStyle}"/>
+
+                            <Button Text="Safe"
+                                 Style="{StaticResource Key=TagStyle}"/>
+
+                            <Button Text="Crime"
+                                 Style="{StaticResource Key=TagStyle}"/>
+                            <Button Text="Sun"
+                                 Style="{StaticResource Key=TagStyle}"/>
+                        </StackLayout>
+
+                        <Label Text="About Hotel"
+                               FontSize="Large"/>
+
+                        <!-- Long paragraph that could be taken from a file in code behind -->
+                        <Label x:Name="Description"
+                               Text="Este es un hotel muy bien posicionado en el centro de la zona mas privilegiada de Santo Domingo, conocida comunmente por su nombre Capotillo. Es una zona de punto turisitico famosa a nivel mundial por sus exportaciones agricultoras y por su bella fauna. Este hotel le dara accesso rapido a los principales puntos de comercio de la zona. Posee buena gastronomia y policias en patrullaje a todas horas del dia, todos los dias de la semana."
+                               />
                     </StackLayout>
+
                 </Frame>
             </ScrollView>
         </Grid>
