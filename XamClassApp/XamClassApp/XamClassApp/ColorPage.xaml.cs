@@ -15,6 +15,7 @@ namespace XamClassApp
         public ColorPage(string ColorName, Color BGColor)
         {
             InitializeComponent();
+           
             ColorLabel.Text = ColorName;
             BackgroundColor = BGColor;
         }

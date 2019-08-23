@@ -21,7 +21,7 @@ namespace XamClassApp
         async private void Button_Clicked(object sender, EventArgs e)
         {
             var CurButton = (sender as Button);
-            await Navigation.PushAsync(new ColorPage(CurButton.Text,CurButton.BackgroundColor));
+            await Navigation.PushAsync((new ColorPage(CurButton.Text, CurButton.BackgroundColor)));
         }
     }
 }
