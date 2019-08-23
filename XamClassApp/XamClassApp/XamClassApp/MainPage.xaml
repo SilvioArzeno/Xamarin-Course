@@ -14,14 +14,18 @@
             
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="15">
                 <Button x:Name="RedButton"
+                        
+                        Style="{StaticResource Key=ButtonStyle}"
                         BackgroundColor="Red"
                         Text="Red" 
                         Clicked="Button_Clicked"/>
                 <Button x:Name="GreenButton"
+                        Style="{StaticResource Key=ButtonStyle}"
                         BackgroundColor="Green"
                         Text="Green" 
                         Clicked="Button_Clicked"/>
                 <Button x:Name="BlueButton"
+                        Style="{StaticResource Key=ButtonStyle}"
                         BackgroundColor="Blue"
                         Text="Blue"
                         Clicked="Button_Clicked" />
