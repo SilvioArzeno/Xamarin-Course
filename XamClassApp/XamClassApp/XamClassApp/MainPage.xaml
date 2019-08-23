@@ -6,11 +6,32 @@
              mc:Ignorable="d"
              x:Class="XamClassApp.MainPage">
     <ScrollView>
-        <StackLayout>
+        <StackLayout Margin="15,0,15,0"
+                     VerticalOptions="Center">
             <!-- Place new controls here -->
-            <Label Text="Welcome to Xamarin.Forms!" 
-               HorizontalOptions="Center"
-               VerticalOptions="CenterAndExpand" />
+            <Entry x:Name="NameEntry"
+                   Placeholder="Enter your name"/>
+            
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="15">
+                <Button x:Name="RedButton"
+                        BackgroundColor="Red"
+                        Text="Red" 
+                        Clicked="Button_Clicked"/>
+                <Button x:Name="GreenButton"
+                        BackgroundColor="Green"
+                        Text="Green" 
+                        Clicked="Button_Clicked"/>
+                <Button x:Name="BlueButton"
+                        BackgroundColor="Blue"
+                        Text="Blue"
+                        Clicked="Button_Clicked" />
+            </StackLayout>
+            <Label x:Name="NameLabel"
+                Text="Hello Color"
+                   TextColor="Black"
+                   FontSize="Large"
+                   FontAttributes="Bold"/>
+
         </StackLayout>
     </ScrollView>
 </ContentPage>

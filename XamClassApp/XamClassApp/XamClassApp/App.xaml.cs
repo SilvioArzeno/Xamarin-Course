@@ -10,7 +10,7 @@ namespace XamClassApp
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MainPage()) { BarBackgroundColor = Color.Transparent };
         }
 
         protected override void OnStart()
