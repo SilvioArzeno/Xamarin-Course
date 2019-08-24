@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XamClassApp.Views;
 
 namespace XamClassApp
 {
@@ -9,8 +10,8 @@ namespace XamClassApp
         public App()
         {
             InitializeComponent();
-
-            MainPage = new NavigationPage(new MainPage()) { BarBackgroundColor = Color.Transparent };
+            MainPage = new AnimalsPage();
+           // MainPage = new NavigationPage(new MainPage()) { BarBackgroundColor = Color.Transparent };
         }
 
         protected override void OnStart()
