@@ -4,19 +4,22 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="LoginPractice.MainPage">
+             x:Class="LoginPractice.LoginPage">
     <ScrollView>
         <StackLayout>
         <!-- Place new controls here -->
+            
             <Image Source="logointec.png"
                    Scale="0.75"
                    VerticalOptions="Center"
                    HeightRequest="300"/>
             <Entry x:Name="Username"
+                   Text="{Binding MyUser.UserName}"
                    Margin="30,0,30,0"
                    Placeholder="Username"
                    TextColor="Black"/>
             <Entry x:Name="Password"
+                   Text="{Binding MyUser.Password}"
                    Margin="30,0,30,0"
                    Placeholder="Password"
                    TextColor="Black"
@@ -29,7 +32,7 @@
                     TextColor="White"
                     FontSize="Medium"
                     FontAttributes="Bold"
-                    Clicked="LoginButton_Clicked"/>
+                   Command="{Binding LoginCommand}"/>
         </StackLayout>
     </ScrollView>
 </ContentPage>
