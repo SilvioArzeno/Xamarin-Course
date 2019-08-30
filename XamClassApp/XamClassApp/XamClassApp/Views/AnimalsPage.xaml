@@ -9,7 +9,7 @@
         <StackLayout>
             <Button Text="CLICK HERE"
                     Command="{Binding LoginCommand}"/>
-            <Label Text="{Binding MyAnimal.Name}"
+            <Label Text="{Binding MyAnimal.Name , Mode=TwoWay}"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>

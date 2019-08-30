@@ -12,14 +12,16 @@ namespace XamClassApp.ViewModel
         public ICommand LoginCommand { get; set; }
         public Animal MyAnimal { get; set; }
 
-        public AnimalsViewModel()
+        public AnimalsViewModel() 
         {
             MyAnimal = new Animal();
             MyAnimal.Name = "Giraffa";
 
             LoginCommand = new Command(() =>
            {
-              
+
+               MyAnimal.Name = "Elefante";
+
            });
         }
     }
