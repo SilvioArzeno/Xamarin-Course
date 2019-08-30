@@ -19,6 +19,8 @@ namespace LoginPractice
             InitializeComponent();
             BindingContext = new UserViewModel();
         }
+
+        
     }
        
 }

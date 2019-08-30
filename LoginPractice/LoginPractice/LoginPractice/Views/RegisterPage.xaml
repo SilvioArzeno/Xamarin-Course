@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="LoginPractice.Views.RegisterPage"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <!-- Place new controls here -->
+
+                <Image Source="logointec.png"
+                   Scale="0.65"
+                   VerticalOptions="Center"
+                   HeightRequest="200"/>
+                <Entry x:Name="Username"
+                   Style="{StaticResource Key=RegularEntry}"
+                   Text="{Binding CurrentRegistration.UserName}"
+                   Placeholder="Username"/>
+                
+                <Entry x:Name="Email"
+                   Style="{StaticResource Key=EmailEntry}"
+                   Text="{Binding CurrentRegistration.Email}"/>
+                
+                <Entry x:Name="Password"
+                   Style="{StaticResource Key=PasswordEntry}"
+                   Text="{Binding CurrentRegistration.Password}"/>
+                
+                <Entry x:Name="ConfirmPassword"
+                   Text="{Binding CurrentRegistration.ConfirmPassword}"
+                   Style="{StaticResource Key=PasswordEntry}"
+                   Placeholder="Confirm Password"/>
+                
+                <Label x:Name="ErrorLabel"
+                   Text="{Binding ErrorMessage, Mode=TwoWay}"
+                   Style="{StaticResource Key=ErrorLabel}"
+                   IsVisible="{Binding ShowErrorMessage,Mode=TwoWay}"/>
+                
+                <Button x:Name="RegisterButton"
+                    Style="{StaticResource Key=SubmitButton}"
+                    Text="Register"
+                   Command="{Binding RegisterCommand}" />
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

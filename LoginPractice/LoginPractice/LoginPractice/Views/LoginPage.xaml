@@ -4,7 +4,8 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="LoginPractice.LoginPage">
+             x:Class="LoginPractice.LoginPage"
+             NavigationPage.HasNavigationBar="False">
     <ScrollView>
         <StackLayout>
         <!-- Place new controls here -->
@@ -15,24 +16,30 @@
                    HeightRequest="300"/>
             <Entry x:Name="Username"
                    Text="{Binding MyUser.UserName}"
-                   Margin="30,0,30,0"
-                   Placeholder="Username"
-                   TextColor="Black"/>
+                   Style="{StaticResource Key=RegularEntry}"
+                   Placeholder="Username"/>
+            
             <Entry x:Name="Password"
                    Text="{Binding MyUser.Password}"
-                   Margin="30,0,30,0"
-                   Placeholder="Password"
-                   TextColor="Black"
-                   IsPassword = "True"/>
+                   Style="{StaticResource Key=PasswordEntry}"/>
+            <Label x:Name="ErrorLabel"
+                   Text="{Binding ErrorMessage, Mode=TwoWay}"
+                   Style="{StaticResource Key=ErrorLabel}"
+                   IsVisible="{Binding ShowErrorMessage,Mode=TwoWay}"/>
             <Button x:Name="LoginButton"
-                    BackgroundColor="Red"
-                    Margin="75,15,75,15"
-                    CornerRadius="25"
-                    Text="Login"
-                    TextColor="White"
-                    FontSize="Medium"
-                    FontAttributes="Bold"
+                   Text="Login"
+                   Style="{StaticResource Key=SubmitButton}"
                    Command="{Binding LoginCommand}"/>
+            
+            <Label x:Name="RegisterLabel"
+                   Text="Register"
+                   Style="{StaticResource Key=LinkLabel}">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer
+                        Command="{Binding TappedRegisterCommand}"/>
+                </Label.GestureRecognizers>
+            </Label>
+            
         </StackLayout>
     </ScrollView>
 </ContentPage>
