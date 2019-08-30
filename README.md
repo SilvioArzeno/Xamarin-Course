@@ -12,4 +12,6 @@ Also added some new commands and validations for login anda BRAND NEW Home page 
   #### Login Feature
   User can now go straight to the Home page if all fields in the login page are filled.
   
+  Screenshots are in the "Screenshots" folder
+  
  ![Alt text](https://github.com/SilvioArzeno/Xamarin-Course/tree/RegisterPage/LoginPractice/Screenshots/Screenshot_1567203869.png)
