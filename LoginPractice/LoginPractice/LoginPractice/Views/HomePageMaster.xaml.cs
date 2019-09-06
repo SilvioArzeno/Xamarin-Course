@@ -33,8 +33,7 @@ namespace LoginPractice.Views
             {
                 MenuItems = new ObservableCollection<HomePageMasterMenuItem>(new[]
                 {
-                    new HomePageMasterMenuItem { Id = 0, Title = "Home", TargetType = typeof(HomePageDetail) },
-                    new HomePageMasterMenuItem { Id = 1, Title = "Contact us",TargetType = typeof(ContactPage) },
+                    new HomePageMasterMenuItem { Id = 0, Title = "My Contacts", TargetType = typeof(ContactPage) },
                
                 });
             }

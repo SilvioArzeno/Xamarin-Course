@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="LoginPractice.Views.EditContactForm">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry x:Name="FirstNameEntry"
+                   Style="{StaticResource Key=RegularEntry}"
+                   Placeholder="First Name"
+                   Text="{Binding FirstName}"
+                   />
+            <Entry x:Name="LastNameEntry"
+                   Style="{StaticResource Key=RegularEntry}"
+                   Placeholder="Last Name"
+                   Text="{Binding LastName}"
+                   />
+            <Entry x:Name="EmailEntry"
+                   Style="{StaticResource Key=EmailEntry}"
+                   Text="{Binding Email}"
+                   />
+            <Entry x:Name="CompanyEntry"
+                   Style="{StaticResource Key=RegularEntry}"
+                   Placeholder="Company"
+                   Text="{Binding Company}"
+                   />
+            <Entry x:Name="PhoneNumberEntry"
+                   Style="{StaticResource Key=RegularEntry}"
+                   Placeholder="Phone Number"
+                   Keyboard="Telephone"
+                   Text="{Binding PhoneNumber}"
+                   />
+            <Button x:Name="SaveButton"
+                    Style="{StaticResource Key=SubmitButton}"
+                    Text=" Save contact"
+                    Clicked="SaveButton_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
