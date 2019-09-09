@@ -40,6 +40,7 @@ namespace LoginPractice.ViewModels
         {
             App.Current.MainPage.DisplayAlert($"{tappedContact.FirstName} {tappedContact.LastName}",
                 $"Phone number: {tappedContact.PhoneNumber}", "Ok");
+            TappedContact = null;
         }
 
         public ContactViewModel()
@@ -63,6 +64,10 @@ namespace LoginPractice.ViewModels
         {
             Contact SelectedContact = sender as Contact;
             ContactList.Remove(SelectedContact);
+            SQLiteConnection connection = new SQLiteConnection(App.DatabaseLocation);
+            connection.CreateTable<Contact>();
+            connection.Delete(SelectedContact);
+            connection.Close();
         }
 
         async private void  DisplayMoreMenu(object sender)
@@ -72,7 +77,7 @@ namespace LoginPractice.ViewModels
 
             if(Action == "Edit Contact")
             {
-                ContactList.Remove(SelectedContact); 
+                DeleteContact(SelectedContact); 
                await App.Current.MainPage.Navigation.PushModalAsync(new EditContactForm(SelectedContact));
             }
             else if (Action == $"Call {SelectedContact.PhoneNumber}")

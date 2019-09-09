@@ -26,7 +26,7 @@ namespace LoginPractice.ViewModels
             
             LoginCommand = new Command(async() =>
             {
-                if(String.IsNullOrEmpty(MyUser.UserName) || String.IsNullOrEmpty(MyUser.UserName))
+                if(String.IsNullOrEmpty(MyUser.UserName) || String.IsNullOrEmpty(MyUser.Password))
                 {
                     ErrorMessage = "Email or Password cannot be empty";
                     ShowErrorMessage = true;
