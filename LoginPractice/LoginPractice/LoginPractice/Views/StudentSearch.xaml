@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="LoginPractice.Views.StudentSearch"
+             Title="Find Students">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Find other students by their ID number"
+                   Style="{StaticResource Key=RegularLabel}"
+                   TextColor="Red"
+                   FontAttributes="Bold"
+                   FontSize="Large"
+                   VerticalOptions="Start"
+                   Margin="0,25,0,0"/>
+            <Entry Placeholder="Matricula"
+                   Text="{Binding matriculasearch,Mode=TwoWay}"
+                   Style="{StaticResource Key=RegularEntry}"
+                   FontSize="Medium"
+                   HorizontalTextAlignment="Center"
+                   Margin="150,0,150,0"/>
+
+            <Button Text="Search"
+                    Command="{Binding SearchStudent}"
+                    Style="{StaticResource Key=SubmitButton}"/>
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Matricula: " TextColor="Red" FontAttributes="Bold" FontSize="Large" />
+                        <Span Text="{Binding MatchStudent.matricula}" TextColor="Black" FontSize="Large" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Nombre: " TextColor="Red" FontAttributes="Bold" FontSize="Large"  />
+                        <Span Text="{Binding MatchStudent.nombres}" TextColor="Black" FontSize="Large" />
+                    </FormattedString>
+                </Label.FormattedText>
+              </Label>
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                        <Span Text="Apellido: " TextColor="Red" FontAttributes="Bold" FontSize="Large" />
+                        <Span Text="{Binding MatchStudent.apellidos}" TextColor="Black" FontSize="Large" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Email: " TextColor="Red" FontAttributes="Bold" FontSize="Large" />
+                        <Span Text="{Binding MatchStudent.email}" TextColor="Black" FontSize="Large" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -34,7 +34,8 @@ namespace LoginPractice.Views
                 MenuItems = new ObservableCollection<HomePageMasterMenuItem>(new[]
                 {
                     new HomePageMasterMenuItem { Id = 0, Title = "My Contacts", TargetType = typeof(ContactPage) },
-               
+                     new HomePageMasterMenuItem { Id = 1, Title = "Find Students", TargetType = typeof(StudentSearch) }
+
                 });
             }
 
