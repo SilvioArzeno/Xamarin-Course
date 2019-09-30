@@ -5,22 +5,31 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="TipsNTricks.Views.NameAlertPage"
-             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+             xmlns:helpers ="clr-namespace:TipsNTricks.Helpers"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
-                >
+                Title="Name Alert">
     <ContentPage.Content>
-        <StackLayout>
-            <Entry Placeholder="Enter your name here"
+        <StackLayout VerticalOptions="Center">
+            <Entry Style="{StaticResource RegularEntry}"
+                    Placeholder="Enter your name here"
                    Text="{Binding EnteredName}"
                    ios:Entry.AdjustsFontSizeToFitWidth="True"/>
-            <Button Text="Click me!"
-                    Command="{Binding ChangeLabelCommand, StringFormat='Hello {0}'}"
-                    android:Button.UseDefaultPadding="True"
+            <Button  Style="{StaticResource SubmitButton}"
+                    Command="{Binding ChangeLabelCommand}"
                    />
-            <Label Text="{Binding EnteredName}"
-                   FontSize="Large"
-                   FontAttributes="Bold"
+            <Label  Style="{StaticResource AlertLabel}"
+                    Text="{Binding EnteredName , StringFormat='Hello {0}'}"
                    IsVisible="{Binding IsLabelVisible}"/>
+            <Label Style="{StaticResource RegularLabel}"
+                   VerticalOptions="End">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text=" Current date: " FontSize="Small"/>
+                        <Span Text="{Binding Source={x:Static helpers:Settings.CurrentDate},StringFormat='{0:dd/MM/yyyy}'}" FontSize="Small"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

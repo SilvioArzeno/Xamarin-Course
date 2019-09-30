@@ -5,14 +5,21 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="TipsNTricks.Views.GenPage"
-             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
-             Title="Generations">
+             Title="Generation">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout VerticalOptions="Center">
+            <Entry Style="{StaticResource RegularEntry}"
+                    Placeholder="Enter the year you were born"
+                   Text="{Binding EnteredYear}"
+                   Keyboard="Numeric"
+                   ios:Entry.AdjustsFontSizeToFitWidth="True"/>
+            <Button  Style="{StaticResource SubmitButton}"
+                    Command="{Binding ChangeLabelCommand}"
+                   />
+            <Label  Style="{StaticResource AlertLabel}"
+                    Text="{Binding GenerationResult}"
+                   IsVisible="{Binding IsLabelVisible}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
