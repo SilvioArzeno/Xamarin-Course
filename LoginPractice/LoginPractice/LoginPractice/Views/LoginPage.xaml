@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="LoginPractice.LoginPage"
+             NavigationPage.HasNavigationBar="False">
+    <ScrollView>
+        <StackLayout>
+        <!-- Place new controls here -->
+            
+            <Image Source="logointec.png"
+                   Scale="0.75"
+                   VerticalOptions="Center"
+                   HeightRequest="300"/>
+            <Entry x:Name="Username"
+                   Text="{Binding MyUser.UserName}"
+                   Style="{StaticResource Key=RegularEntry}"
+                   Placeholder="Username"/>
+            
+            <Entry x:Name="Password"
+                   Text="{Binding MyUser.Password}"
+                   Style="{StaticResource Key=PasswordEntry}"/>
+            <Label x:Name="ErrorLabel"
+                   Text="{Binding ErrorMessage, Mode=TwoWay}"
+                   Style="{StaticResource Key=ErrorLabel}"
+                   IsVisible="{Binding ShowErrorMessage,Mode=TwoWay}"/>
+            <Button x:Name="LoginButton"
+                   Text="Login"
+                   Style="{StaticResource Key=SubmitButton}"
+                   Command="{Binding LoginCommand}"/>
+            
+            <Label x:Name="RegisterLabel"
+                   Text="Register"
+                   Style="{StaticResource Key=LinkLabel}">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer
+                        Command="{Binding TappedRegisterCommand}"/>
+                </Label.GestureRecognizers>
+            </Label>
+            
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

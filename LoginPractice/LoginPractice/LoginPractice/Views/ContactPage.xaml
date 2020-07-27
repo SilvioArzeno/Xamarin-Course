@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="LoginPractice.Views.ContactPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Order="Primary" Text="ADD" Command="{Binding NewContactCommand}"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ListView x:Name="ContactListView"
+                  ItemsSource="{Binding ContactList}"
+                  CachingStrategy="RecycleElement"
+                  SelectedItem="{Binding TappedContact , Mode=TwoWay}">
+            
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem Text="More" Command="{Binding Path = BindingContext.OnMoreCommand , Source= {x:Reference Name= ContactListView}}" 
+                                      CommandParameter="{Binding .}"/>
+                            <MenuItem Text="Delete" Command="{Binding Path = BindingContext.DeleteContactCommand , Source= {x:Reference Name= ContactListView}}"
+                                      CommandParameter="{Binding .}" 
+                                      IsDestructive="True"/>
+                        </ViewCell.ContextActions>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="15"/>
+                                <RowDefinition Height="1"/>
+                                <RowDefinition Height="20"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="65"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                        <Image Source="logointec" 
+                               Grid.Column="0"
+                               Grid.RowSpan="3  "/>
+                            <StackLayout Orientation="Horizontal"
+                                         Grid.Column="1"
+                                         Grid.RowSpan="2">
+                                <Label Text="{Binding FirstName}"
+                                    FontSize="Medium"
+                                    FontAttributes="Bold"
+                                    TextColor="Red"
+                                    VerticalOptions="Center"/>
+                                <Label Text="{Binding LastName}"
+                                    FontSize="Medium"
+                                    FontAttributes="Bold"
+                                    TextColor="Red"
+                                    VerticalOptions="Center"/>
+                            </StackLayout>
+
+                            <Label Text="{Binding PhoneNumber}"
+                                   
+                                   FontSize="Caption"
+                                    FontAttributes="Bold"
+                                    TextColor="#ff8080"
+                                    VerticalOptions="Center"
+                                   Grid.Column="1"
+                                   Grid.Row="2"/>
+                        </Grid>
+
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

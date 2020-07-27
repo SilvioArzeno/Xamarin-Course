@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="LoginPractice.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="Red"/>
+                <Setter Property="BarTextColor" Value="White"/>
+                
+            </Style>
+            <Style x:Key="RegularLabel" TargetType="Label">
+                <Setter Property="Margin" Value="30,0,30,0"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="FontSize" Value="Medium"/>
+            </Style>
+            <Style x:Key="ErrorLabel" TargetType="Label">
+                <Setter Property="HorizontalOptions" Value ="Center"/>
+                <Setter Property="TextColor" Value="Red"/>
+            </Style>
+            <Style x:Key="LinkLabel" TargetType="Label">
+                <Setter Property="TextColor" Value="Red"/>
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="TextDecorations" Value="Underline"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+            </Style>
+            <Style x:Key="SubmitButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Red"/>
+                <Setter Property="Margin" Value="75,15,75,15"/>
+                <Setter Property="CornerRadius" Value="25"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+            <Style x:Key="RegularEntry" TargetType="Entry">
+                <Setter Property="Margin" Value="30,0,30,0"/>
+                <Setter Property="TextColor" Value="Black"/>
+            </Style>
+            <Style x:Key="PasswordEntry" TargetType="Entry">
+                <Setter Property="Margin" Value="30,0,30,0"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="IsPassword" Value="True"/>
+                <Setter Property="Placeholder" Value="Password"/>
+            </Style>
+            <Style x:Key="EmailEntry" TargetType="Entry">
+                <Setter Property="Margin" Value="30,0,30,0"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="Keyboard" Value="Email"/>
+                <Setter Property="Placeholder" Value="Email"/>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
